@@ -4,4 +4,7 @@ public class PaymentProcessor {
     public PaymentProcessor(IPaymentService paymentService) {
         this.paymentService = paymentService;
     }
+    public void processPayment(String recipient, double amount) {
+        paymentService.sendMoney(recipient, amount);
+    }
 }
